@@ -1,0 +1,7 @@
+---
+version: "3"
+services:
+  cyberchef:
+    image: ghcr.io/kingpin/cyberchef:latest
+    container_name: cyberchef
+    restart: unless-stopped
