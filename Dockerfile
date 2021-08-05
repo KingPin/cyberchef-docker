@@ -30,4 +30,4 @@ HEALTHCHECK --retries=10 CMD curl -s -XGET 'http://127.0.0.1:8000'
 EXPOSE 8000/tcp
 USER nobody:nobody
 WORKDIR /opt/cyberchef
-CMD ["http-server", "-p", "8000"]
+CMD ["http-server", "-p", "8000", "-s", "-b", "-g"]
