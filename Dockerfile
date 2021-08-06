@@ -1,6 +1,6 @@
-LABEL org.opencontainers.image.source https://github.com/KingPin/cyberchef-docker
-
 FROM alpine:3.10
+
+LABEL org.opencontainers.image.source https://github.com/KingPin/cyberchef-docker
 
 RUN apk -U --no-cache add \
             curl \
