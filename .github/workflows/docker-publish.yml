@@ -1,13 +1,6 @@
 name: Docker
 
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 on:
-  schedule:
-    - cron: '31 16 * * *'
   push:
     branches: [ main ]
     # Publish semver tags as releases.
@@ -16,9 +9,7 @@ on:
     branches: [ main ]
 
 env:
-  # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
-  # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
 
@@ -76,5 +67,5 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ghcr.io/kingpin/cyberchef-docker:latest
-            kingpin/cyberchef:latest
+            kingpin/cyberchef-docker:latest
           labels: ${{ steps.meta.outputs.labels }}
