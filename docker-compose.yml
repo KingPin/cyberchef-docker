@@ -5,3 +5,5 @@ services:
     image: ghcr.io/kingpin/cyberchef:latest
     container_name: cyberchef
     restart: unless-stopped
+    exposes:
+      - 8000
